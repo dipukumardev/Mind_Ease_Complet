@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#moving_elem {
+    position: absolute;
+    width: 60%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+    width: 44%;
+    left: 30%;
+}
+
+#moving_elem .move {
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving_elem .move img {
+    height: 2vw;
+    margin: 0 1vw;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

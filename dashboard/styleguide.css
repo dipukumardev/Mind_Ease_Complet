@@ -1,0 +1,14 @@
+:root {
+  --paragraph-button-and-more-font-family: "Outfit-Regular", Helvetica;
+  --paragraph-button-and-more-font-weight: 400;
+  --paragraph-button-and-more-font-size: 20px;
+  --paragraph-button-and-more-letter-spacing: 0px;
+  --paragraph-button-and-more-line-height: normal;
+  --paragraph-button-and-more-font-style: normal;
+  --heading-font-family: "Outfit-Medium", Helvetica;
+  --heading-font-weight: 500;
+  --heading-font-size: 64px;
+  --heading-letter-spacing: 0px;
+  --heading-line-height: normal;
+  --heading-font-style: normal;
+}

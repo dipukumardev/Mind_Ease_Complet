@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="stylesheet" href="anima">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-fm5euV2zSgsr8tlFUe8PU1rwp7ugphlpxWm4o6bHjZ8a1ufvN5bzEW2lYry0Lyb8cfYlzMgtCc2I1dV5aUe2sg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-fm5euV2zSgsr8tlFUe8PU1rwp7ugphlpxWm4o6bHjZ8a1ufvN5bzEW2lYry0Lyb8cfYlzMgtCc2I1dV5aUe2sg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+<body>
+    <div class="dashboard-responso">
+        <!-- <div class="div"> -->
+
+        <div class="LEFT-SIDE-BAR">
+
+            <a href="Homepage/index.html">
+                <div class="LOGO">
+                    <img class="icon-3" src="img/icon.png" />
+
+                </div>
+            </a>
+            <div class="TOP">
+                <button class="BUTTON dash" id="dashboardBtn">
+                    <div class="text-wrapper">Dashboard</div>
+                    <img class="dashboard-customize" src="img/dashboard-customize.png" />
+                </button>
+
+                <button class="BUTTON" id="activityBtn">
+                    <div class="text-wrapper">Therapists</div>
+                    <img class="dashboard-customize" src="img/Therapists.png" />
+                </button>
+
+                <button class="BUTTON" id="profileBtn">
+                    <div class="text-wrapper">Recommandation</div>
+                    <img class="dashboard-customize" src="img/activity.png" />
+                </button>
+
+                <button class="BUTTON" id="walletsBtn">
+                    <div class="text-wrapper">Community</div>
+                    <img class="dashboard-customize" src="img/community.png" />
+                </button>
+
+                <button class="BUTTON" id="chatsBtn">
+                    <div class="text-wrapper">Chats</div>
+                    <img class="dashboard-customize" src="img/chat.png" />
+                </button>
+                <button class="BUTTON" id="reportBtn">
+                    <div class="text-wrapper">Report</div>
+                    <img class="dashboard-customize" src="img/Report.png" />
+                </button>
+                <div class="settingLog">
+                    <button class="BUTTON" id="settingsBtn">
+                        <div class="text-wrapper">Setting</div>
+                        <img class="dashboard-customize" src="img/setting.png" />
+                    </button>
+                    <button class="BUTTON" id="logoutBtn">
+                        <div class="text-wrapper">Logout</div>
+                        <img class="dashboard-customize" src="img/logout.png" />
+                    </button>
+
+                </div>
+            </div>
+            <!-- <img class="img" src="img/button.png" /> -->
+
+
+        </div>
+
+
+        <div class="CENTER">
+
+            <div class="UPLOAD-SECTION container main01">
+                <div class="chat-container"></div>
+
+                <!-- Typing container -->
+                <div class="typing-container">
+                    <div class="typing-content">
+                        <div class="typing-textarea">
+                            <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here"
+                                required></textarea>
+                            <span id="send-btn" class="material-symbols-rounded">send</span>
+                        </div>
+                        <div class="typing-controls">
+                            <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+                            <span id="delete-btn" class="material-symbols-rounded">delete</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- </div> -->
+        </div>
+
+<div class="RIGHT-SIDE-BAR">
+    <div class="HISTORY">
+        <div class="ITEMS">
+            <img class="element" src="img/04.png" />
+            <div class="element-2">
+                <div class="overlap-group-5">
+                    <div class="text-2">Mental Healht Report</div>
+                    <img class="icon-4" src="img/Report.png" />
+                </div>
+            </div>
+            <div class="element-3">
+                <div class="overlap-group-5">
+                    <div class="text-3">You done your survey</div>
+                    <img class="icon-5" src="img/icon-2.png" />
+                </div>
+            </div>
+            <div class="element-4">
+                <div class="overlap-group-5">
+                    <div class="text-4">You are registered</div>
+                    <img class="icon-6" src="img/icon-1.png" />
+                </div>
+            </div>
+        </div>
+        <div class="HEADING-2">History</div>
+    </div>
+    <div class="TOTAL-CREDIT">Total Progress :- 15</div>
+    <div class="EDIT-SECTION">
+        <div class="group-5">
+            <div class="overlap-7">
+                <div class="illustration-male">
+                    <div class="overlap-group-6">
+                        <div class="ellipse"></div>
+                        <img class="illustration-male" src="img/illustration-male-avatar.png" />
+                    </div>
+                </div>
+                <div class="text-wrapper-18">@dipu</div>
+                <img class="icon-edit-outline" src="img/icon-edit-2-outline.png" />
+            </div>
+        </div>
+    </div>
+    <div class="NAV">
+        <img class="more-vert" src="img/more-vert.png" />
+        <div class="text-wrapper-19">Profile</div>
+    </div>
+</div>
+
+        
+        <link rel="stylesheet" href="script.js">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll('.BUTTON');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('clicked', 'hovered'));
+                        button.classList.add('clicked');
+                    });
+
+                    button.addEventListener('mouseenter', () => {
+                        if (!button.classList.contains('clicked')) {
+                            document.getElementById('dashboardBtn').classList.add('hovered');
+                        }
+                    });
+
+                    button.addEventListener('mouseleave', () => {
+                        if (!button.classList.contains('clicked')) {
+                            document.getElementById('dashboardBtn').classList.remove('hovered');
+                        }
+                    });
+                });
+            });
+
+            // JavaScript
+
+
+
+        </script>
+
+        <script>
+            // JavaScript
+            document.getElementById("dashboardBtn").addEventListener("click", function () {
+                window.location.href = "dashboard.html";
+            });
+
+            document.getElementById("activityBtn").addEventListener("click", function () {
+                window.location.href = "therapists.html";
+            });
+
+            document.getElementById("profileBtn").addEventListener("click", function () {
+                window.location.href = "recommandation.html";
+            });
+
+            document.getElementById("walletsBtn").addEventListener("click", function () {
+                window.location.href = "community.html";
+            });
+
+            document.getElementById("chatsBtn").addEventListener("click", function () {
+                window.location.href = "chats.html";
+            });
+
+            document.getElementById("reportBtn").addEventListener("click", function () {
+                window.location.href = "Report.html";
+            });
+
+            document.getElementById("settingsBtn").addEventListener("click", function () {
+                window.location.href = "settings.html";
+            });
+
+            document.getElementById("logoutBtn").addEventListener("click", function () {
+                confirm("you have to logout..")
+                window.location.href = "login.html";
+            });
+
+        </script>
+        <script>
+            const chatInput = document.querySelector("#chat-input");
+const sendButton = document.querySelector("#send-btn");
+const chatContainer = document.querySelector(".chat-container");
+const themeButton = document.querySelector("#theme-btn");
+const deleteButton = document.querySelector("#delete-btn");
+
+let userText = null;
+const API_KEY = "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"; // Paste your API key here
+
+const loadDataFromLocalstorage = () => {
+    // Load saved chats and theme from local storage and apply/add on the page
+    const themeColor = localStorage.getItem("themeColor");
+
+    document.body.classList.toggle("light-mode", themeColor === "light_mode");
+    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+
+    const defaultText = `<div class="default-text">
+                            <h1>Your Soo Cold Friend</h1>
+                            <p>Start a conversation and explore the power of AI.<br> Your chat history will be displayed here.</p>
+                        </div>`
+
+    chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
+    chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
+}
+
+const createChatElement = (content, className) => {
+    // Create new div and apply chat, specified class and set html content of div
+    const chatDiv = document.createElement("div");
+    chatDiv.classList.add("chat", className);
+    chatDiv.innerHTML = content;
+    return chatDiv; // Return the created chat div
+}
+
+const getChatResponse = async (incomingChatDiv) => {
+    const API_URL = "https://api.openai.com/v1/completions";
+    const pElement = document.createElement("p");
+
+    // Define the properties and data for the API request
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`
+        },
+        body: JSON.stringify({
+            model: "text-davinci-003",
+            prompt: userText,
+            max_tokens: 2048,
+            temperature: 0.2,
+            n: 1,
+            stop: null
+        })
+    }
+
+    // Send POST request to API, get response and set the reponse as paragraph element text
+    try {
+        const response = await (await fetch(API_URL, requestOptions)).json();
+        pElement.textContent = response.choices[0].text.trim();
+    } catch (error) { // Add error class to the paragraph element and set error text
+        pElement.classList.add("error");
+        pElement.textContent = "Oops! Something went wrong while retrieving the response. Please try again.";
+    }
+
+    // Remove the typing animation, append the paragraph element and save the chats to local storage
+    incomingChatDiv.querySelector(".typing-animation").remove();
+    incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
+    localStorage.setItem("all-chats", chatContainer.innerHTML);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
+}
+
+const copyResponse = (copyBtn) => {
+    // Copy the text content of the response to the clipboard
+    const reponseTextElement = copyBtn.parentElement.querySelector("p");
+    navigator.clipboard.writeText(reponseTextElement.textContent);
+    copyBtn.textContent = "done";
+    setTimeout(() => copyBtn.textContent = "content_copy", 1000);
+}
+
+const showTypingAnimation = () => {
+    // Display the typing animation and call the getChatResponse function
+    const html = `<div class="chat-content">
+                    <div class="chat-details">
+                        <img src="img/chat.png" alt="chatbot-img">
+                        <div class="typing-animation">
+                            <div class="typing-dot" style="--delay: 0.2s"></div>
+                            <div class="typing-dot" style="--delay: 0.3s"></div>
+                            <div class="typing-dot" style="--delay: 0.4s"></div>
+                        </div>
+                    </div>
+                    <span onclick="copyResponse(this)" class="material-symbols-rounded">content_copy</span>
+                </div>`;
+    // Create an incoming chat div with typing animation and append it to chat container
+    const incomingChatDiv = createChatElement(html, "incoming");
+    chatContainer.appendChild(incomingChatDiv);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
+    getChatResponse(incomingChatDiv);
+}
+
+const handleOutgoingChat = () => {
+    userText = chatInput.value.trim(); // Get chatInput value and remove extra spaces
+    if(!userText) return; // If chatInput is empty return from here
+
+    // Clear the input field and reset its height
+    chatInput.value = "";
+    chatInput.style.height = `${initialInputHeight}px`;
+
+    const html = `<div class="chat-content">
+                    <div class="chat-details">
+                        <img src="images/user.jpg" alt="user-img">
+                        <p>${userText}</p>
+                    </div>
+                </div>`;
+
+    // Create an outgoing chat div with user's message and append it to chat container
+    const outgoingChatDiv = createChatElement(html, "outgoing");
+    chatContainer.querySelector(".default-text")?.remove();
+    chatContainer.appendChild(outgoingChatDiv);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
+    setTimeout(showTypingAnimation, 500);
+}
+
+deleteButton.addEventListener("click", () => {
+    // Remove the chats from local storage and call loadDataFromLocalstorage function
+    if(confirm("Are you sure you want to delete all the chats?")) {
+        localStorage.removeItem("all-chats");
+        loadDataFromLocalstorage();
+    }
+});
+
+themeButton.addEventListener("click", () => {
+    // Toggle body's class for the theme mode and save the updated theme to the local storage 
+    document.body.classList.toggle("light-mode");
+    localStorage.setItem("themeColor", themeButton.innerText);
+    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+});
+
+const initialInputHeight = chatInput.scrollHeight;
+
+chatInput.addEventListener("input", () => {   
+    // Adjust the height of the input field dynamically based on its content
+    chatInput.style.height =  `${initialInputHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+    // If the Enter key is pressed without Shift and the window width is larger 
+    // than 800 pixels, handle the outgoing chat
+    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+        e.preventDefault();
+        handleOutgoingChat();
+    }
+});
+
+loadDataFromLocalstorage();
+sendButton.addEventListener("click", handleOutgoingChat);
+        </script>
+
+</body>
+
+</html>

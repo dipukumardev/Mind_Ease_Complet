@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel="stylesheet" href="anima">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-fm5euV2zSgsr8tlFUe8PU1rwp7ugphlpxWm4o6bHjZ8a1ufvN5bzEW2lYry0Lyb8cfYlzMgtCc2I1dV5aUe2sg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-fm5euV2zSgsr8tlFUe8PU1rwp7ugphlpxWm4o6bHjZ8a1ufvN5bzEW2lYry0Lyb8cfYlzMgtCc2I1dV5aUe2sg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="dashboard.css">
+
+
+</head>
+
+<body>
+  <div class="dashboard-responso">
+    <!-- <div class="div"> -->
+
+    <div class="LEFT-SIDE-BAR">
+
+      <a href="Homepage/index.html">
+        <div class="LOGO">
+          <img class="icon-3" src="img/icon.png" />
+
+        </div>
+      </a>
+      <div class="TOP">
+        <button class="BUTTON dash" id="dashboardBtn">
+          <div class="text-wrapper">Dashboard</div>
+          <img class="dashboard-customize" src="img/dashboard-customize.png" />
+        </button>
+
+        <button class="BUTTON" id="profileBtn">
+          <div class="text-wrapper">Recommendation</div>
+          <img class="dashboard-customize" src="img/activity.png" />
+        </button>
+
+        <button class="BUTTON" id="walletsBtn">
+          <div class="text-wrapper">Community</div>
+          <img class="dashboard-customize" src="img/community.png" />
+        </button>
+
+        <button class="BUTTON" id="chatsBtn">
+          <div class="text-wrapper">Chats</div>
+          <img class="dashboard-customize" src="img/chat.png" />
+        </button>
+        <button class="BUTTON" id="reportBtn">
+          <div class="text-wrapper">Report</div>
+          <img class="dashboard-customize" src="img/Report.png" />
+        </button>
+        <button class="BUTTON" id="activityBtn">
+          <div class="text-wrapper">Therapists</div>
+          <img class="dashboard-customize" src="img/Therapists.png" />
+        </button>
+
+        <div class="settingLog">
+          <button class="BUTTON" id="settingsBtn">
+            <div class="text-wrapper">Setting</div>
+            <img class="dashboard-customize" src="img/setting.png" />
+          </button>
+          <button class="BUTTON" id="logoutBtn">
+            <div class="text-wrapper">Logout</div>
+            <img class="dashboard-customize" src="img/logout.png" />
+          </button>
+
+        </div>
+      </div>
+      <!-- <img class="img" src="img/button.png" /> -->
+
+
+    </div>
+
+
+    <div class="CENTER">
+      <header class="HEADER">
+        <div class="GREETS">
+          <p class="greet"><span class="span">Mental health recover , <span id="userName">Mindeasy</span></span></p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="RIGHT-SIDE-NAVBARS">
+
+          <div class="darkmod_button">
+            <!-- <div class="lightmod mod"><h1>🌞</h1></div>
+                           <div class="blackmod mod"><h1>🌙</h1></div> -->
+            <img src="img/brightness-contrast.svg" alt="">
+
+          </div>
+
+          <div class="search">
+            <input type="search" name="" id="search" placeholder="Search  ">
+            <img src="img/search.svg" id="searchicon" alt="">
+          </div>
+
+        </div>
+
+      </header>
+
+      <div class="UPLOAD-SECTION container main01">
+        <div class="serviceBox">
+          <div class="servicHead">
+            <h2>Mental Health Assessment Questionnaire</h2>
+          </div>
+
+          <div class="serviceBody">
+            <div class="serviceOption" onclick="startAssessment('ACADEMIC STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>ACADEMIC STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Assessing academic stress factors among students for effective stress management.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+
+            <div class="serviceOption" onclick="startAssessment('RELATIONSHIP STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>RELATIONSHIP STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Evaluating relationship dynamics to understand and manage relationship-related stress.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+
+            <div class="serviceOption" onclick="startAssessment('WORKLOAD STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>WORKLOAD STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Analyzing workload stressors to develop strategies for academic balance.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+
+            <div class="serviceOption" onclick="startAssessment('HEALTH-RELATED STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>HEALTH-RELATED STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Investigating health-related stressors to promote student well-being and resilience.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+
+            <div class="serviceOption" onclick="startAssessment('FINANCIAL STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>FINANCIAL STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Examining financial stress factors to enhance financial literacy and stability.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+
+            <div class="serviceOption" onclick="startAssessment('SOCIAL-RELATED STRESS')">
+              <div class="servicename">
+                <!-- <img src="Therapists.png" alt="Web Design Image" /> -->
+                <h3>SOCIAL-RELATED STRESS:</h3>
+              </div>
+              <!-- <div class="p">
+                <p>Exploring social stressors to foster supportive campus environments and connections.</p>
+              </div> -->
+              <button>Start your Assessment</button>
+            </div>
+          </div>
+
+          <div id="quiz-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div class="but">
+              <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+              <button id="next-btn" onclick="nextQuestion()">Next</button>
+            </div>
+            <br>
+            <progress id="progress" max="100" value="0"></progress>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="RIGHT-SIDE-BAR">
+      <div class="HISTORY">
+        <div class="ITEMS">
+          <img class="element" src="img/04.png" />
+          <div class="element-2">
+            <div class="overlap-group-5">
+              <div class="text-2">Mental Healht Report</div>
+              <img class="icon-4" src="img/Report.png" />
+            </div>
+          </div>
+          <div class="element-3">
+            <div class="overlap-group-5">
+              <div class="text-3">You done your survey</div>
+              <img class="icon-5" src="img/icon-2.png" />
+            </div>
+          </div>
+          <div class="element-4">
+            <div class="overlap-group-5">
+              <div class="text-4">You are registered</div>
+              <img class="icon-6" src="img/icon-1.png" />
+            </div>
+          </div>
+        </div>
+        <div class="HEADING-2">History</div>
+      </div>
+      <div class="TOTAL-CREDIT">Total Progress :- 15</div>
+      <div class="EDIT-SECTION">
+        <div class="group-5">
+          <div class="overlap-7">
+            <div class="illustration-male">
+              <div class="overlap-group-6">
+                <div class="ellipse"></div>
+                <img class="illustration-male" src="img/illustration-male-avatar.png" />
+              </div>
+            </div>
+            <div class="text-wrapper-18">@nirbhay_987</div>
+            <img class="icon-edit-outline" src="img/icon-edit-2-outline.png" />
+          </div>
+        </div>
+      </div>
+      <div class="NAV">
+        <img class="more-vert" src="img/more-vert.png" />
+        <div class="text-wrapper-19">Profile</div>
+      </div>
+         </div>
+
+    <!-- </div> -->
+  </div>
+
+<div class="container" id="container" style="display: none;">
+  <h1>Grievances Portal</h1>
+  <form id="grievanceForm" action="/submit-grievance" method="POST">
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" placeholder="Enter category" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+    <div id="submitStatus"></div>
+    <div id="successMessage" style="display: none;">Grievance submitted successfully!</div>
+    <input type="submit" id="submitButton" value="Submit Grievance">
+  </form>
+</div>
+<button class="complan" id="startAssessments">Anti Ragging Helplie - 9893571097</button>
+<button class="complan" id="startAssessment">Loadge complain</button>
+
+  <link rel="stylesheet" href="script.js">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('.BUTTON');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('clicked', 'hovered'));
+          button.classList.add('clicked');
+        });
+
+        button.addEventListener('mouseenter', () => {
+          if (!button.classList.contains('clicked')) {
+            document.getElementById('dashboardBtn').classList.add('hovered');
+          }
+        });
+
+        button.addEventListener('mouseleave', () => {
+          if (!button.classList.contains('clicked')) {
+            document.getElementById('dashboardBtn').classList.remove('hovered');
+          }
+        });
+      });
+    });
+
+    // JavaScript
+
+
+
+  </script>
+
+  <script>
+    // JavaScript
+    document.getElementById("dashboardBtn").addEventListener("click", function () {
+      window.location.href = "dashboard.html";
+    });
+
+    document.getElementById("activityBtn").addEventListener("click", function () {
+      window.location.href = "therapists.html";
+    });
+
+    document.getElementById("profileBtn").addEventListener("click", function () {
+      window.location.href = "Recommandation.html";
+    });
+
+    document.getElementById("walletsBtn").addEventListener("click", function () {
+      window.location.href = "Community.html";
+    });
+
+    document.getElementById("chatsBtn").addEventListener("click", function () {
+      window.location.href = "chats.html";
+    });
+
+    document.getElementById("reportBtn").addEventListener("click", function () {
+      window.location.href = "Report.html";
+    });
+
+    document.getElementById("settingsBtn").addEventListener("click", function () {
+      window.location.href = "settings.html";
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+      // Display confirmation message
+      const confirmLogout = confirm("Are you sure you want to logout?");
+      if (confirmLogout) {
+        // Redirect to login.html
+        window.location.href = "/login";
+      }
+    });
+
+
+  </script>
+  <script src="script.js"></script>
+  <script>
+    // Function to show container
+      function showContainer() {
+        document.getElementById('container').style.display = 'block';
+      }
+
+      // Function to close container
+      function closeContainer() {
+        document.getElementById('container').style.display = 'none';
+      }
+
+      // Event listener for button click to show container
+      document.getElementById('startAssessment').addEventListener('click', showContainer);
+
+      // Event listener for form submission
+      document.getElementById('grievanceForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        // Show loading bar
+        document.getElementById('submitStatus').style.display = 'block';
+        document.getElementById('submitButton').style.display = 'none';
+
+        // Simulate form submission (replace with actual submission logic)
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate 2 seconds delay
+        // Show success message
+        document.getElementById('submitStatus').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      });
+
+      // Event listener to close container when clicking outside of it
+      document.body.addEventListener('click', function (event) {
+        if (!event.target.closest('#container') && event.target !== document.getElementById('startAssessment')) {
+          closeContainer();
+        }
+      });
+
+  </script>
+  <script>
+    // Sample assessment data
+
+    const assessments = {
+      "ACADEMIC STRESS": {
+        questions: [
+          {
+            question: "What is your current academic level?",
+            options: ["Freshman", "Sophomore", "Junior", "Senior"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of academic stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "What aspects of your academic life contribute the most to your stress? (Select all that apply)",
+            options: [
+              "Course workload",
+              "Exam pressure",
+              "Time management",
+              "Balancing extracurricular activities"
+
+            ]
+          },
+          {
+            question: "How aware are you of the academic support services offered by your institution?",
+            options: ["Not aware at all", "Somewhat aware", "Fully aware"]
+          },
+          {
+            question: "Have you ever utilized academic support services such as tutoring, counseling, or academic advising?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with academic stress? (Select all that apply)",
+            options: [
+              "Exercise or physical activity",
+              "Meditation or mindfulness practices",
+              "Seeking support from friends or family",
+              "Time management techniques"
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate academic stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to reduce academic stress among students?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your academic stress experience or any other related concerns?",
+            options: ["Yes", "No"]
+          }
+        ]
+      },
+      "RELATIONSHIP STRESS": {
+        questions: [
+          {
+            question: "What is your age range?",
+            options: ["Under 18", "18-21", "22-25", "Over 30"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of relationship-related stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "What aspects of your relationships contribute the most to your stress? (Select all that apply)",
+            options: [
+              "Romantic partner conflicts",
+              "Family conflicts",
+              "Friendships",
+              "Roommate conflicts"
+
+            ]
+          },
+          {
+            question: "How comfortable are you discussing relationship-related stress with your partner or loved ones?",
+            options: ["Very comfortable", "Somewhat comfortable", "Not comfortable"]
+          },
+          {
+            question: "Do you have access to resources or support services to help you navigate relationship challenges?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with relationship-related stress? (Select all that apply)",
+            options: [
+              "Open communication with partner or loved ones",
+              "Seeking advice from friends or family",
+              "Seeking professional counseling or therapy",
+              "Engaging in self-care activities (e.g., exercise, meditation)"
+
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate relationship stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to support students in managing relationship stress?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your experience with relationship stress or any related concerns?",
+            options: ["Yes", "No"]
+          }
+        ]
+      },
+      "WORKLOAD STRESS": {
+        questions: [
+          {
+            question: "What is your age range?",
+            options: ["Under 18", "18-21", "22-25", "Over 30"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of workload-related stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "Which of the following factors contribute the most to your workload-related stress? (Select all that apply)",
+            options: [
+              "Number of assignments or projects",
+              "Exam pressure",
+              "Balancing work and studies",
+              "Research or thesis requirements"
+            ]
+          },
+          {
+            question: "How do you typically manage your time to cope with workload stress? (Select all that apply)",
+            options: [
+              "Prioritizing tasks",
+              "Using a planner or calendar",
+              "Breaking tasks into smaller, manageable steps",
+              "Setting realistic goals and deadlines"
+            ]
+          },
+          {
+            question: "How effective do you find your current time management strategies in reducing workload stress?",
+            options: ["Very effective", "Somewhat effective", "Not effective"]
+          },
+          {
+            question: "Are you aware of resources or support services offered by your institution to help manage workload stress?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with workload-related stress? (Select all that apply)",
+            options: [
+              "Taking regular breaks",
+              "Engaging in physical exercise or relaxation techniques",
+              "Seeking emotional support from friends or family",
+              "Practicing mindfulness or meditation"
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate workload stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to reduce workload stress among students?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your experience with workload-related stress or any related concerns?",
+            options: ["(Open text field)"]
+          }
+        ]
+      },
+      "HEALTH-RELATED STRESS": {
+        questions: [
+          {
+            question: "What is your age range?",
+            options: ["Under 18", "18-21", "22-25", "Over 30"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of health-related stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "Which of the following factors contribute the most to your health-related stress? (Select all that apply)",
+            options: [
+              "Physical health concerns",
+              "Mental health concerns",
+              "Lack of sleep or poor sleep quality",
+              "Nutrition or dietary concerns"
+            ]
+          },
+          {
+            question: "How often do you engage in physical activity or exercise?",
+            options: ["Daily", "Several times a week", "Once a week", "Rarely"]
+          },
+          {
+            question: "How would you rate your current sleep quality?",
+            options: ["Excellent", "Good", "Fair", "Poor"]
+          },
+          {
+            question: "Do you follow a balanced diet with regular meals?",
+            options: ["Yes, always", "Yes, most of the time", "Sometimes", "Rarely"]
+          },
+          {
+            question: "Are you aware of healthcare services offered by your institution or in your community?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with health-related stress? (Select all that apply)",
+            options: [
+              "Seeking medical or professional help",
+              "Talking to friends or family members",
+              "Engaging in relaxation techniques (e.g., meditation, deep breathing)",
+              "Practicing mindfulness or yoga"
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate health-related stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to support students in managing health-related stress?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your experience with health-related stress or any related concerns?",
+            options: ["(Open text field)"]
+          }
+        ]
+      },
+      "FINANCIAL STRESS": {
+        questions: [
+          {
+            question: "What is your age range?",
+            options: ["Under 18", "18-21", "22-25", "Over 30"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of financial-related stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "Which of the following factors contribute the most to your financial-related stress? (Select all that apply)",
+            options: [
+              "Tuition fees",
+              "Student loans or debt",
+              "Cost of living expenses (e.g., rent, utilities)",
+              "Food expenses"
+            ]
+          },
+          {
+            question: "Do you have a budget or financial plan to manage your expenses?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How confident are you in your ability to stick to your budget or financial plan?",
+            options: ["Very confident", "Somewhat confident", "Not confident"]
+          },
+          {
+            question: "Are you aware of financial aid or scholarship opportunities available to students at your institution?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with financial-related stress? (Select all that apply)",
+            options: [
+              "Seeking part-time employment",
+              "Applying for additional financial aid or scholarships",
+              "Creating a realistic budget and sticking to it",
+              "Seeking guidance from financial advisors or counselors"
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate financial stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to support students in managing financial-related stress?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your experience with financial-related stress or any related concerns?",
+            options: ["(Open text field)"]
+          }
+        ]
+      },
+      "SOCIAL-RELATED STRESS": {
+        questions: [
+          {
+            question: "What is your age range?",
+            options: ["Under 18", "18-21", "22-25", "Over 30"]
+          },
+          {
+            question: "On a scale of 1 to 5, rate your overall level of social-related stress.",
+            options: ["1 (Very Low)", "2 (Low)", "3 (Moderate)", "4 (High)"]
+          },
+          {
+            question: "Which of the following factors contribute the most to your social-related stress? (Select all that apply)",
+            options: [
+              "Feelings of loneliness or isolation",
+              "Difficulty making friends or maintaining relationships",
+              "Peer pressure",
+              "Social anxiety or fear of judgment"
+            ]
+          },
+          {
+            question: "How connected do you feel to your peers or social groups?",
+            options: ["Very connected", "Somewhat connected", "Not very connected", "Not connected at all"]
+          },
+          {
+            question: "Have you sought support or companionship from friends or peers when feeling socially stressed?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "How do you typically cope with social-related stress? (Select all that apply)",
+            options: [
+              "Engaging in social activities or hobbies",
+              "Seeking support from friends or family",
+              "Practicing relaxation techniques (e.g., deep breathing, mindfulness)"
+            ]
+          },
+          {
+            question: "How often do you engage in self-care activities to alleviate social stress?",
+            options: ["Daily", "Weekly", "Monthly", "Rarely"]
+          },
+          {
+            question: "Are there any changes you would like to see implemented by your institution to support students in managing social-related stress?",
+            options: ["Yes", "No"]
+          },
+          {
+            question: "Is there anything else you would like to share about your experience with social-related stress or any related concerns?",
+            options: ["(Open text field)"]
+          }
+        ]
+      }
+    };
+
+
+    let currentAssessment;
+    let currentQuestionIndex = 0;
+
+    function startAssessment(assessmentType) {
+      currentAssessment = assessments[assessmentType];
+      currentQuestionIndex = 0;
+      showQuestion();
+      document.querySelector('.serviceBody').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'flex';
+    }
+
+    function showQuestion() {
+      const questionContainer = document.getElementById('question');
+      const optionsContainer = document.getElementById('options');
+      const currentQuestion = currentAssessment.questions[currentQuestionIndex];
+
+      questionContainer.innerText = currentQuestion.question;
+      optionsContainer.innerHTML = '';
+
+      currentQuestion.options.forEach((option, index) => {
+        const optionElement = document.createElement('div');
+        optionElement.innerText = option;
+        optionElement.classList.add('option');
+        optionElement.setAttribute('onclick', `selectOption(${index})`);
+        optionsContainer.appendChild(optionElement);
+      });
+    }
+
+    // JavaScript for capturing and formatting quiz responses
+    let quizResponses = {}; // Object to store quiz responses
+
+    function selectOption(optionIndex) {
+      const selectedOption = currentAssessment.questions[currentQuestionIndex].options[optionIndex];
+
+      // Capture the selected option
+      quizResponses[currentAssessment.questions[currentQuestionIndex].question] = selectedOption;
+
+      // Update progress bar
+      const progressBar = document.getElementById('progress');
+      const totalQuestions = currentAssessment.questions.length;
+      const progressValue = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+      progressBar.value = progressValue;
+
+      // Remove 'selected' class from all options
+      const options = document.querySelectorAll('.option');
+      options.forEach((option) => {
+        option.classList.remove('selected');
+      });
+
+      // Add 'selected' class to the clicked option
+      const clickedOption = options[optionIndex];
+      clickedOption.classList.add('selected');
+
+      // Increment question index or show result if it's the last question
+      if (currentQuestionIndex < currentAssessment.questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    // Function to show quiz result or perform any other action
+    // Function to show quiz result or perform any other action
+    function showResult() {
+      // Display result or perform any other action
+      console.log('Assessment completed!');
+      console.log('Quiz Responses:', quizResponses);
+
+      // Show loading animation
+      document.getElementById('quiz-container').innerHTML = `
+                  <div class="loading">Loading...</div>
+                  <div class="loading-bar">
+                      <div class="loading-progress"></div>
+                  </div>
+              `;
+
+      // Wait for 10 seconds before showing recommendations and report sections
+      setTimeout(() => {
+        // Replace the loading animation with the recommendation and report sections
+        document.getElementById('quiz-container').innerHTML = '<div class="message">According to your responses, we have recommendations for you in the Recommendations section. You can also view your mental health in the Report section.</div>';
+
+        // Wait for 5 seconds before redirecting back to the serviceBody
+        setTimeout(() => {
+          // Redirect to serviceBody
+          document.getElementById('quiz-container').style.display = 'none';
+          document.querySelector('.serviceBody').style.display = 'flex'; // Assuming you want to show serviceBody again
+        }, 3000);
+      }, 6000);
+    }
+
+  function sendQuizResponses(quizResponses) {
+    fetch('/quizResponses', { // Assuming your server is running on the same domain
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(quizResponses)
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Quiz responses sent successfully');
+        } else {
+          console.error('Failed to send quiz responses');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  // Assuming quizResponses is an object containing the user's quiz responses
+
+  // Call the function to send quiz responses
+
+    // Assuming quizResponses is an object containing the user's quiz responses
+
+    // Call the function to send quiz responses
+    sendQuizResponses(quizResponses);
+
+
+
+
+
+
+
+
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < currentAssessment.questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion();
+      }
+    }
+
+
+
+
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
